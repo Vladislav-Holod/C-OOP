@@ -5,7 +5,7 @@ namespace Lab3
 {
     public class Lab3 
     {
-        public static void Run_1(string[] args)
+        public static void Run_1()
         {
             TextWriter save_out = Console.Out;
             TextReader save_in = Console.In;

@@ -6,7 +6,7 @@ namespace Lab2
 {
     public class Lab2
     {
-        public static void Run_1(string[] args)
+        public static void Run_1()
         {
             TextWriter originalOut = Console.Out;
             TextReader originalIn = Console.In;
