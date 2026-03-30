@@ -1,7 +1,12 @@
-﻿using Myapp.Lab1;
-// using Myapp.Lab2;
-// using Myapp.Lab3;
-// using Myapp.Lab4;
-// using Myapp.Lab5;
-// using Myapp.Lab6;
-Lab1.Run();
+class Program
+{
+    static void Main()
+    {
+        System.Console.WriteLine(">>> Старт приложения");
+        
+        // Вызываем класс напрямую через полное имя: Пространство.Класс.Метод
+        Lab1.Lab1.Run();
+        
+        System.Console.WriteLine(">>> Конец");
+    }
+}
