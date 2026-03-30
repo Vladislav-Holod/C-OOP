@@ -4,8 +4,7 @@ class Program
     {
         System.Console.WriteLine(">>> Старт приложения");
         
-        // Вызываем класс напрямую через полное имя: Пространство.Класс.Метод
-        Lab1.Lab1.Run();
+        Lab1.Lab1.Run_2();
         
         System.Console.WriteLine(">>> Конец");
     }
