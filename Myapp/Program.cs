@@ -4,7 +4,7 @@ class Program
     {
         System.Console.WriteLine(">>> Старт приложения");
         
-        Lab2.Lab2.Run_1(new string[] { });
+        Lab3.Lab3.Run_1(new string[] { });
 
         System.Console.WriteLine(">>> Конец");
     }
