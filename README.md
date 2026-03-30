@@ -4,7 +4,7 @@
 
 static void Main()
 {   
-    //System.Console.WriteLine("[INFO] Start");
+    System.Console.WriteLine("[INFO] Start");
     
     // Оставьте активную:
     Lab6.Lab6.Run_1();  // ← текущая работа
