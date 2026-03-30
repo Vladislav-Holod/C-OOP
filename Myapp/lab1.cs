@@ -19,11 +19,11 @@ namespace Lab1
             float f = 5.0f;  
             float y = 3.0f;   
 
-            double Z = 35.0 / f + y * f - (f + y) / 4.0;
+            float Z = 35.0f / f + y * f - (f + y) / 4.0f;
 
-            Console.WriteLine($"Значение f = {f}");
-            Console.WriteLine($"Значение y = {y}");
-            Console.WriteLine($"Результат выражения Z = {Z}");
+            Console.WriteLine("Значение f = {f}");
+            Console.WriteLine("Значение y = {y}");
+            Console.WriteLine("Результат выражения Z = {Z}");
         }
 
     }
