@@ -18,7 +18,7 @@ class Program
     {
         System.Console.WriteLine("[INFO] Start");
         
-        Lab3.Lab3.Run_1();
+        Lab6.Lab6.Run_1();
 
         System.Console.WriteLine("[INFO] End ");
     }
