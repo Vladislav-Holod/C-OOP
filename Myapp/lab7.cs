@@ -1,30 +1,95 @@
 using System;
 
-namespace Lab1  
+namespace Lab7 
 {
-    public class Lab1 
+
+    class Triangle
+    {
+        private double a, b;
+        public Triangle()
+        {
+            a = 0;
+            b = 0;
+        }
+
+        public Triangle(double a, double b)
+        {
+            this.a = a;
+            this.b = b;
+        }
+
+        public Triangle(double a)
+        {
+            this.a = a;
+            this.b = a;
+        }
+
+        public void Input()
+        {
+            Console.Write("Введите катет a: ");
+            a = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Введите катет b: ");
+            b = Convert.ToDouble(Console.ReadLine());
+        }
+
+        public void Input(double a, double b)
+        {
+            this.a = a;
+            this.b = b;
+        }
+        public double GetHypotenuse()
+        {
+            return Math.Sqrt(a * a + b * b);
+        }
+
+        public double GetArea()
+        {
+            return 0.5 * a * b;
+        }
+
+        public double GetPerimeter()
+        {
+            return a + b + GetHypotenuse();
+        }
+
+
+        public void Info()
+        {
+            Console.WriteLine("=== Прямоугольный треугольник ===");
+            Console.WriteLine($"a = {a}");
+            Console.WriteLine($"b = {b}");
+            Console.WriteLine($"c = {GetHypotenuse():F2}");
+            Console.WriteLine($"S = {GetArea():F2}");
+            Console.WriteLine($"P = {GetPerimeter():F2}");
+        }
+
+        public void Info(ConsoleColor fg, ConsoleColor bg)
+        {
+            Console.ForegroundColor = fg;
+            Console.BackgroundColor = bg;
+
+            Info();
+
+            Console.ResetColor();
+        }
+    }
+
+    public class Lab7
     {
         public static void Run_1()
         {
-            Console.WriteLine("ЛАБОРАТОРНАЯ РАБОТА 1. РАЗРАБОТКА КОНСОЛЬНОГО ПРИЛОЖЕНИЯ ");
-            Console.WriteLine("Катигин Владислав Геннадьевич");
-            Console.WriteLine("ИДПО_ИСИТ-3-24/1");
-            Console.WriteLine("24.01.2004");
-            Console.WriteLine("Ставрополь");
-            Console.WriteLine("Информатика");
-            Console.WriteLine("Программирования,Музыка");
+
+            Triangle t1 = new Triangle(3, 4);
+            t1.Info(ConsoleColor.Yellow, ConsoleColor.Blue);
+
+
+            Triangle t2 = new Triangle();
+            t2.Input();
+            t2.Info();
+
+            Console.WriteLine("Нажмите любую клавишу для выхода...");
+            Console.ReadKey();
         }
-
-        public static void Run_2(){
-            float f = 5.0f;  
-            float y = 3.0f;   
-
-            float Z = 35.0f / f + y * f - (f + y) / 4.0f;
-
-            Console.WriteLine("Значение f = {f}");
-            Console.WriteLine("Значение y = {y}");
-            Console.WriteLine("Результат выражения Z = {Z}");
-        }
-
     }
 }
