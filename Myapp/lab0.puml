@@ -1,0 +1,32 @@
+@startuml
+
+interface IRepairable {
+    +Repair()
+}
+
+abstract class Transport {
+    +Name : string
+    +Move()
+}
+
+class Car {
+    +Move()
+    +Repair()
+}
+
+class Bike {
+    +Move()
+}
+
+class Lab9 {
+    +Run_1()
+}
+
+' Наследование
+Transport <|-- Car
+Transport <|-- Bike
+
+' Реализация интерфейса
+IRepairable <|.. Car
+
+@enduml
